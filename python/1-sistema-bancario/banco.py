@@ -21,7 +21,7 @@ while True:
         deposito = float(input("Valor: "))
         if deposito > 0:
             saldo += deposito
-            extrato += f"Deposito - Valor: {deposito} \n"
+            extrato += f"Deposito - Valor: R$ {deposito:.2f} \n"
         else:
             print("Deposito inválido.")
         print("Depósito")
@@ -30,7 +30,11 @@ while True:
         print("Saque")
 
     elif opcao == "e":
-        print("Extrato")
+        if extrato != "":
+            print(extrato)
+            print(f"Saldo Atual: R$ {saldo:.2f}")
+        else:
+            print("Não foram realizdas movimentações")
 
     elif opcao == "q":
         break
