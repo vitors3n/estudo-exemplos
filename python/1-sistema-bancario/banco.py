@@ -21,7 +21,7 @@ while True:
         deposito = float(input("Valor: "))
         if deposito > 0:
             saldo += deposito
-            extrato += f"Deposito - Valor: {deposito}"
+            extrato += f"Deposito - Valor: {deposito} \n"
         else:
             print("Deposito inválido.")
         print("Depósito")
