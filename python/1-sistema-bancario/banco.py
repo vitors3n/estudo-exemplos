@@ -11,7 +11,7 @@ saldo = 0
 limite = 500
 extrato = ""
 numero_saques = 0
-LIMITE_SAQUES = 5
+LIMITE_SAQUES = 3
 
 while True:
 
@@ -21,20 +21,40 @@ while True:
         deposito = float(input("Valor: "))
         if deposito > 0:
             saldo += deposito
-            extrato += f"Deposito - Valor: R$ {deposito:.2f} \n"
+            deposito = f"{deposito:.2f}".replace(".",",")
+            extrato += f"Deposito - Valor: R$ {deposito} \n"
         else:
             print("Deposito inválido.")
         print("Depósito")
 
     elif opcao == "s":
-        print("Saque")
+        if numero_saques >= LIMITE_SAQUES:
+            print("Limite de saques diário atingido.")
+            continue
+
+        saque = float(input("Valor para saque: "))
+        if saque > 500:
+            print("O valor do saque é maior que o limite máximo de R$ 500,00")
+            continue
+
+        if saque < 0:
+            print("Operação inválida.")
+        if saque > saldo:
+            print("Saldo insuficiente.")
+        else:
+            saldo -= saque
+            saque = f"{saque:.2f}".replace(".",",")
+            extrato += f"Saque - Valor: R$ {saque} \n"
+            print(f"Saque de R$ {saque} realizado com sucesso.")
+            numero_saques += 1
 
     elif opcao == "e":
         if extrato != "":
             print(extrato)
-            print(f"Saldo Atual: R$ {saldo:.2f}")
+            saldo_str = f"{saldo:.2f}".replace(".",",")
+            print(f"Saldo Atual: R$ {saldo_str}")
         else:
-            print("Não foram realizdas movimentações")
+            print("Não foram realizadas movimentações")
 
     elif opcao == "q":
         break
