@@ -32,7 +32,14 @@ def depositar(saldo, valor, extrato, /):
     return saldo, extrato
     
 
-def vistualizar_extrato(saldo, extrato ,/):
+def retirar_extrato(saldo, /, *, extrato):
+    if extrato != "":
+        print(extrato)
+        saldo_str = f"{saldo:.2f}".replace(".",",")
+        print(f"Saldo Atual: R$ {saldo_str}")
+    else:
+        print("Não foram realizadas movimentações")
+    
     pass
 
 def criar_usuario():
@@ -79,12 +86,7 @@ def main():
             )
 
         elif opcao == "e":
-            if extrato != "":
-                print(extrato)
-                saldo_str = f"{saldo:.2f}".replace(".",",")
-                print(f"Saldo Atual: R$ {saldo_str}")
-            else:
-                print("Não foram realizadas movimentações")
+            retirar_extrato(saldo, extrato=extrato)
 
         elif opcao == "q":
             break
