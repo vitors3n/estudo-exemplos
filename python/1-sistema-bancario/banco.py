@@ -19,7 +19,7 @@ def sacar(*, saldo, valor, extrato, limite, numero_saques, limite_saques):
         print(f"Saque de R$ {valor} realizado com sucesso.")
 
         numero_saques += 1
-    return saldo, extrato
+    return saldo, extrato, numero_saques
 
 def depositar(saldo, valor, extrato, /):
     if valor > 0:
@@ -42,21 +42,39 @@ def retirar_extrato(saldo, /, *, extrato):
     
     pass
 
-def criar_usuario():
-    pass
+def criar_usuario(usuarios):
+    cpf = input("Informe CPF (somente número): ")
+    
+    usuario = filtrar_usuario(cpf, usuarios)
+    if usuario: 
+        print("Usuário já existe")
+        return
 
+    nome = input("Informe o nome completo: ") 
+    data_nascimento = input("Informe a data de nascimento (dd-mm-aaaa): ")
+    endereco = input("Informe o endereço (logradouro, nro - bairro - cidade/sigla estado): ")
+    
+    usuarios.append({ "nome": nome, "data_nascimento": data_nascimento, "cpf": cpf, "endereco": endereco })
+    
+    print("Usuário criado com sucesso!")
+    
 def criar_conta_corrente():
     pass
 
+def filtrar_usuario(cpf, usuarios):
+    usuarios_filtrados = [usuario for usuario in usuarios if usuarios["cpf"] == cpf]
+    return usuarios_filtrados[0] if usuarios_filtrados else None
 
 def main():
 
     menu = """
 
-    [d] Depositar
-    [s] Sacar
-    [e] Extrato
-    [q] Sair
+    [d]  Depositar
+    [s]  Sacar
+    [e]  Extrato
+    [nu] Novo usuario
+    [nc] Nova conta
+    [q]  Sair
 
     => """
 
@@ -65,6 +83,8 @@ def main():
     extrato = ""
     numero_saques = 0
     LIMITE_SAQUES = 3
+    contas = []
+    usuarios = []
 
     while True:
 
@@ -72,7 +92,7 @@ def main():
 
         if opcao == "d":
             valor = float(input("Valor: "))
-            saldo, extrato = depositar(saldo, valor, extrato)
+            saldo, extrato, numero_saques = depositar(saldo, valor, extrato)
 
         elif opcao == "s":
             valor = float(input("Valor para saque: "))
@@ -87,6 +107,9 @@ def main():
 
         elif opcao == "e":
             retirar_extrato(saldo, extrato=extrato)
+        
+        elif opcao == "nu":
+            criar_usuario(usuarios)
 
         elif opcao == "q":
             break
