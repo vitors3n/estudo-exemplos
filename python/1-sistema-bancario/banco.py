@@ -76,9 +76,29 @@ class Conta:
             return False
         return True
 
+    def __str__(self):
+        return f"""\
+            Agência: {self.agencia}
+            C/C: {self.numero}
+            Titular: {self.cliente.nome}
+        """
+
+class Historico:
+    def __init__(self):
+        self._transacoes = []
+
+    @property
+    def transacoes(self):
+        return self._transacoes
     
-
-
+    def adicionar_transacao(self, transcao):
+        self._transacoes.append(
+            {
+                "tipo": transcao.__class__.__name__,
+                "valor": transacao.valor,
+                "data": datetime.now().strftime("%d-%m-%Y %H:%M:%s"),
+            }
+        )
 
 def sacar(*, saldo, valor, extrato, limite, numero_saques, limite_saques):
     if numero_saques >= limite_saques:
