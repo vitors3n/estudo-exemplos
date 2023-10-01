@@ -51,6 +51,33 @@ class Conta:
     def historico(self):
         return self._historico
 
+    def sacar(self, valor):
+        saldo = self.saldo
+        excedeu_saldo = valor > saldo
+
+        if excedeu_saldo:
+            print("Operação falho! Você não tem saldo suficiente.")
+
+        elif valor > 0:
+            self.saldo -= valor
+            print("Saque realizado com sucesso!")
+            return True
+        else:
+            print("Operação valhor! Valor informado é inválido.")
+
+        return False
+
+    def depositar(self, valor):
+        if valor > 0:
+            self._saldo += valor
+            print("Depósido realzado com sucesso!")
+        else:
+            print("Operação falhou! Valor informado e inválido.")
+            return False
+        return True
+
+    
+
 
 
 def sacar(*, saldo, valor, extrato, limite, numero_saques, limite_saques):
