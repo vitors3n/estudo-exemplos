@@ -31,7 +31,6 @@ def depositar(saldo, valor, extrato, /):
         print("Deposito inválido.")
     return saldo, extrato
     
-
 def retirar_extrato(saldo, /, *, extrato):
     if extrato != "":
         print(extrato)
@@ -58,11 +57,28 @@ def criar_usuario(usuarios):
     
     print("Usuário criado com sucesso!")
     
-def criar_conta_corrente():
-    pass
+def criar_conta(agencia, numero_conta, usuarios):
+    cpf = input("Informe o CPF do usuário: ")
+    usuario = filtrar_usuario(cpf, usuarios)
+
+    if usuario:
+        print("\n Conta criada com sucesso!")
+        return {"agencia": agencia, "numero_conta": numero_conta, "usuario": usuario}
+    
+    print(" Usuário não encontrado, fluxo de criação de conta encerrado!")
+
+def listar_contas(contas):
+    for conta in contas:
+        linha = f"""\
+            Agência:\t{conta["agencia"]}
+            C/C:\t\t{conta["numero_conta"]}
+            Titular:\t{conta["usuario"]["nome"]}
+        """
+        print("*" * 100)
+        print(linha)
 
 def filtrar_usuario(cpf, usuarios):
-    usuarios_filtrados = [usuario for usuario in usuarios if usuarios["cpf"] == cpf]
+    usuarios_filtrados = [usuario for usuario in usuarios if usuario["cpf"] == cpf]
     return usuarios_filtrados[0] if usuarios_filtrados else None
 
 def main():
@@ -74,6 +90,7 @@ def main():
     [e]  Extrato
     [nu] Novo usuario
     [nc] Nova conta
+    [lc] Listar contas
     [q]  Sair
 
     => """
@@ -83,6 +100,7 @@ def main():
     extrato = ""
     numero_saques = 0
     LIMITE_SAQUES = 3
+    AGENCIA = "0001"
     contas = []
     usuarios = []
 
@@ -111,6 +129,16 @@ def main():
         elif opcao == "nu":
             criar_usuario(usuarios)
 
+        elif opcao == "nc":
+            numero_conta = len(contas) + 1
+            conta = criar_conta(AGENCIA, numero_conta, usuarios)
+
+            if conta:
+                contas.append(conta)
+        
+        elif opcao == "lc":
+            listar_contas(contas)
+                
         elif opcao == "q":
             break
 
