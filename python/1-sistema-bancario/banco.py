@@ -124,6 +124,21 @@ class Saque(Transacao):
         if sucesso_transacao:
             conta.historico.adicionar_transacao(self)
 
+class Deposito(Transacao):
+    def __init__(self, valor):
+        self._valor = valor
+
+    @property
+    def valor(self):
+        return self._valor
+    
+    def registrar(self, conta: Conta):
+        sucesso_transacao = conta.depositar(self.valor)
+
+        if sucesso_transacao:
+            conta.historico.adicionar_transacao(self)
+
+
 def sacar(*, saldo, valor, extrato, limite, numero_saques, limite_saques):
     if numero_saques >= limite_saques:
         print("Limite de saques diário atingido.")
