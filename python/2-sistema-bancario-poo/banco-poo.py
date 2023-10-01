@@ -140,28 +140,24 @@ class Deposito(Transacao):
 
 
 def sacar(*, saldo, valor, extrato, limite, numero_saques, limite_saques):
-    if numero_saques >= limite_saques:
-        print("Limite de saques diário atingido.")
-        return 0
-    if valor > limite:
-        print("O valor do saque é maior que o limite máximo")
-        return 0
-    if valor < 0:
-        print("Operação inválida.")
-        return 0
-    if valor > saldo:
-        print("Saldo insuficiente.")
-        return 0
-    else:
-        saldo -= valor
-        valor = f"{valor:.2f}".replace(".",",")
-        extrato += f"Saque - Valor: R$ {valor} \n"
-        print(f"Saque de R$ {valor} realizado com sucesso.")
+    cpf = input("Informe CPF do cliente: ")
+    cliente : Cliente = filtrar_cliente(cpf, clientes)
 
-        numero_saques += 1
-    return saldo, extrato, numero_saques
+    if not cliente:
+        print("Cliente não encontrado")
+        return
+    
+    valor = float(input("Informe o valor do saque: "))
+    transacao = Saque(valor)
 
-def depositar(saldo, valor, extrato, /):
+    conta = recuperar_conta_cliente(cliente)
+    if not conta:
+        return
+
+    cliente.realizar_transacao(conta, transacao)
+
+
+def depositar(clientes):
     cpf = input("Informe CPF do cliente: ")
     cliente : Cliente = filtrar_cliente(cpf, clientes)
 
@@ -180,15 +176,31 @@ def depositar(saldo, valor, extrato, /):
     cliente.realizar_transacao(conta, transacao)
 
     
-def retirar_extrato(saldo, /, *, extrato):
-    if extrato != "":
-        print(extrato)
-        saldo_str = f"{saldo:.2f}".replace(".",",")
-        print(f"Saldo Atual: R$ {saldo_str}")
-    else:
-        print("Não foram realizadas movimentações")
+def retirar_extrato(clientes):
+    cpf = input("Informe CPF do cliente: ")
+    cliente : Cliente = filtrar_cliente(cpf, clientes)
+
+    if not cliente:
+        print("Cliente não encontrado")
+        return
     
-    pass
+    conta = recuperar_conta_cliente(cliente)
+    if not conta:
+        return
+    
+    print("=========== Extrato ==========")
+    transacoes = conta.historico.transacoes
+
+    extrato = ""
+
+    if not transacoes:
+        extrato = "Não foram realizadas movimentações."
+    else:
+        for transacao in transacoes:
+            extrato += f"\n {transacao['tipo']}:\n\tR${transacao['valor']:.2f}"
+    print(extrato)
+    print(f"\nSaldo:\n\tR$ {conta.saldo:.2f}")
+    print("=====================================")
 
 def criar_usuario(usuarios):
     cpf = input("Informe CPF (somente número): ")
@@ -226,9 +238,12 @@ def listar_contas(contas):
         print("*" * 100)
         print(linha)
 
-def filtrar_usuario(cpf, usuarios):
-    usuarios_filtrados = [usuario for usuario in usuarios if usuario["cpf"] == cpf]
+def filtrar_usuario(cpf, clientes):
+    usuarios_filtrados = [cliente for cliente in clientes if cliente.cpf == cpf]
     return usuarios_filtrados[0] if usuarios_filtrados else None
+
+def recuperar_conta_cliente(cliente):
+    pass
 
 def main():
 
