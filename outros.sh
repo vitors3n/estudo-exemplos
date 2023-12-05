@@ -5,7 +5,8 @@
 
 # Provavelmente nao será necessário instalar o r-base.
 # Verificar versão do R antes.
-sudo apt-get install r-base && \
+#sudo apt-get install r-base && \
+
 sudo apt install r-cran-devtools && \
 R -e "devtools::install_github('IRkernel/IRkernel')" && \
 jupyter kernelspec install /usr/local/lib/R/site-library/IRkernel/kernelspec --name 'R' --user
