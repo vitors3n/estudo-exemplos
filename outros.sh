@@ -8,4 +8,5 @@
 sudo apt-get install r-base && \
 sudo apt install r-cran-devtools && \
 R -e "devtools::install_github('IRkernel/IRkernel')" && \
-jupyter kernelspec install /home/$USER/R/x86_64-pc-linux-gnu-library/4.1/IRkernel/kernelspec --name 'R' --user  && \
+jupyter kernelspec install /usr/local/lib/R/site-library/IRkernel/kernelspec --name 'R' --user  && \
+jupyter kernelspec install /usr/lib/R/x86_64-pc-linux-gnu-library/4.1/IRkernel/kernelspec --name 'R' --user
