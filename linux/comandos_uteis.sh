@@ -34,3 +34,8 @@ mkdir > /dev/null 2>&1 #erro e resultado do comando será enviado para o além
 #0: standard input
 #1: standard output
 #2: standard error
+
+# comandos de leitura
+tail -f logs # follow logs
+tail logs #imprime ultimas linhas sem follow
+head # ->
