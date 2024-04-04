@@ -39,3 +39,12 @@ mkdir > /dev/null 2>&1 #erro e resultado do comando será enviado para o além
 tail -f logs # follow logs
 tail logs #imprime ultimas linhas sem follow
 head # ->
+
+
+#Como mudar hostname no linux?
+#Basta editar o arquivo hostname localizado em /etc/hostname
+
+nano /etc/hostname
+sudo reboot #para aplicar a mudança
+
+
