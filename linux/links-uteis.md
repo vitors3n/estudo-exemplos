@@ -14,3 +14,7 @@ Para voltar para o modo gráfico:
 sudo systemctl set-default graphical.target
 ```
 ----
+
+
+# Mostrar usuário e hostname no oh-my-zsh
+https://github.com/ohmyzsh/ohmyzsh/issues/5686#issuecomment-486348316
