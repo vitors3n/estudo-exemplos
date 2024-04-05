@@ -1,8 +1,8 @@
-# Cores e emojis no terminal do linux.
+### Cores e emojis no terminal do linux.
 https://stackoverflow.com/questions/5947742/how-to-change-the-output-color-of-echo-in-linux
 
 ----
-# Como realizar boot no linux apenas pelo terminal/console
+### Como realizar boot no linux apenas pelo terminal/console
 https://www.linuxuprising.com/2020/01/how-to-boot-to-console-text-mode-in.html
 
 Use:
@@ -16,5 +16,5 @@ sudo systemctl set-default graphical.target
 ----
 
 
-# Mostrar usuário e hostname no oh-my-zsh
+### Mostrar usuário e hostname no oh-my-zsh
 https://github.com/ohmyzsh/ohmyzsh/issues/5686#issuecomment-486348316
