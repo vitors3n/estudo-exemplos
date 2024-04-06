@@ -1,0 +1,7 @@
+- name: Update servers
+  hosts:
+    - Home1
+  tasks:
+  - name: update
+    ansible.builtin.apt:
+       update_cache: true
