@@ -1,4 +1,8 @@
 
+
+### Sobre views em django
+https://testdriven.io/blog/drf-views-part-3/
+
 ### Patch/update com django
 https://stackoverflow.com/questions/37847383/django-rest-framework-apiview-patch
 
