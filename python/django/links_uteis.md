@@ -7,3 +7,7 @@ https://stackoverflow.com/questions/24042439/django-rest-framework-update-method
 
 ### Rodando multiplos apps em python
 https://www.blopig.com/blog/2021/05/hosting-multiple-flask-apps-using-apache-mod_wsgi/
+
+
+### Como recarregar aplicação python hospedada no apache2, WSGI. Embedded Mode, Daemon Mode. (Não é possível no embedded mode)
+https://modwsgi.readthedocs.io/en/master/user-guides/reloading-source-code.html
