@@ -19,3 +19,7 @@ https://modwsgi.readthedocs.io/en/master/user-guides/reloading-source-code.html
 
 ### PUT, POST, PATCH ignora parametros desconhecidos por padrão
 https://github.com/encode/django-rest-framework/issues/6508
+
+
+### Usando THREADING para melhorar performance da API ao enviar e-mail e outros
+https://www.youtube.com/watch?v=3gz7mzveAUw
