@@ -15,3 +15,7 @@ https://www.blopig.com/blog/2021/05/hosting-multiple-flask-apps-using-apache-mod
 
 ### Como recarregar aplicação python hospedada no apache2, WSGI. Embedded Mode, Daemon Mode. (Não é possível no embedded mode)
 https://modwsgi.readthedocs.io/en/master/user-guides/reloading-source-code.html
+
+
+### PUT, POST, PATCH ignora parametros desconhecidos por padrão
+https://github.com/encode/django-rest-framework/issues/6508
