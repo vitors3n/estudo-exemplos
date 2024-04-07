@@ -38,3 +38,9 @@ https://www.youtube.com/watch?v=L8k8Ukw1P6U
 
 ### Usando THREADING para melhorar performance da API ao enviar e-mail e outros
 https://www.youtube.com/watch?v=3gz7mzveAUw
+
+
+## Ferramentas
+
+### Gerando PDF com python/django
+https://medium.com/@biswajitpanda973/how-to-generate-pdf-with-django-bcef180dfbc1
