@@ -23,3 +23,7 @@ https://github.com/encode/django-rest-framework/issues/6508
 
 ### Usando THREADING para melhorar performance da API ao enviar e-mail e outros
 https://www.youtube.com/watch?v=3gz7mzveAUw
+
+
+### Lista de Status code no DRF
+https://www.django-rest-framework.org/api-guide/status-codes/
