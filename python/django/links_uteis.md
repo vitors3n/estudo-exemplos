@@ -29,6 +29,10 @@ https://github.com/encode/django-rest-framework/issues/6508
 ### Lista de Status code no DRF
 https://www.django-rest-framework.org/api-guide/status-codes/
 
+## Transactions
+
+### Django Database Transactions / atomic() function
+https://www.youtube.com/watch?v=L8k8Ukw1P6U
 
 ## Performance
 
