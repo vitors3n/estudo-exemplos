@@ -6,6 +6,8 @@ https://www.youtube.com/watch?v=UklcIDgHtwQ
 ### Preparando Django para Deployment
 https://www.youtube.com/watch?v=nh1ynJGJuT8
 
+https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Deployment
+
 ### Rodando multiplos apps em Python no Apache
 https://www.blopig.com/blog/2021/05/hosting-multiple-flask-apps-using-apache-mod_wsgi/
 
