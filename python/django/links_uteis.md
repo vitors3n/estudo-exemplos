@@ -50,3 +50,13 @@ https://www.youtube.com/watch?v=3gz7mzveAUw
 
 ### Gerando PDF com python/django
 https://medium.com/@biswajitpanda973/how-to-generate-pdf-with-django-bcef180dfbc1
+
+
+## Outros
+
+### Estrutura de projeto 
+
+https://medium.com/django-unleashed/django-project-structure-a-comprehensive-guide-4b2ddbf2b6b8
+
+### Sobre autenticação com Token
+https://medium.com/django-unleashed/token-based-authentication-and-authorization-in-django-rest-framework-user-and-permissions-347c7cc472e9
