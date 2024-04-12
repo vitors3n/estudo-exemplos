@@ -1,0 +1,12 @@
+# Esse playbook atualiza todos os pacotes usando apt, 
+# mas ignora os pacotes que exigem uma intervenção manual do usuário
+
+---
+- name: Atualizar todos os pacotes no host apt update
+  hosts: seu_host # ou nome do grupo de hosts
+  become: yes
+
+  tasks:
+    - name: Atualizar todos os pacotes
+      apt:
+        upgrade: safe
