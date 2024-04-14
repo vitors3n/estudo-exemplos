@@ -30,6 +30,15 @@ RewriteRule ^(.*)$ http://www.exemplo.com/$1 [L,R=301]
 ```
 [NC] transforma o endereço para case-insensitive, eXEMplo.com seria redirecionado para www.exemplo.com.
 
+### Redirecionando www para non-www
+
+```
+
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www\.exemplo\.com [NC]
+RewriteRule ^(.*)$ https://exemplo.com/$1 [L,R=301]
+
+```
 
 ---
 
