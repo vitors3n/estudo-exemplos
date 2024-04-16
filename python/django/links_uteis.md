@@ -61,6 +61,8 @@ https://medium.com/django-unleashed/django-project-structure-a-comprehensive-gui
 ### Sobre autenticação com Token
 https://medium.com/django-unleashed/token-based-authentication-and-authorization-in-django-rest-framework-user-and-permissions-347c7cc472e9
 
+### Django e Plotly integração com visualização de dados
+https://www.youtube.com/watch?v=TcnWEQMT3_A&list=PL-2EBeDYMIbTt63EH9ubqbvQqJkBP3vzy
 
 ### Comandos úteis
 https://medium.com/@rajputgajanan50/top-7-django-commands-every-developer-needs-to-know-dd8e1ec3f987
