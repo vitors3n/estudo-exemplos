@@ -66,3 +66,8 @@ https://www.youtube.com/watch?v=TcnWEQMT3_A&list=PL-2EBeDYMIbTt63EH9ubqbvQqJkBP3
 
 ### Comandos úteis
 https://medium.com/@rajputgajanan50/top-7-django-commands-every-developer-needs-to-know-dd8e1ec3f987
+
+### Canais sobre Django no Youtube
+
+https://www.youtube.com/@mattfreire
+https://www.youtube.com/@bugbytes3923
