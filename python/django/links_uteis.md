@@ -70,4 +70,7 @@ https://medium.com/@rajputgajanan50/top-7-django-commands-every-developer-needs-
 ### Canais sobre Django no Youtube
 
 https://www.youtube.com/@mattfreire
+
 https://www.youtube.com/@bugbytes3923
+
+https://www.youtube.com/@DennisIvy
