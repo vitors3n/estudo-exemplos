@@ -49,8 +49,10 @@ sudo reboot #para aplicar a mudança
 
 # -a recursivo, -v verbose
 # --progress mostra progresso da transferencia
-# rsync verifica a integridade dos arquivos ao copia-los
 rsync -av /path/to/source /path/to/destination
+
+# verifica integridade com --checksum
+rsync --checksum -av /path/to/source /path/to/destination
 
 
 # checar integridade
