@@ -47,4 +47,18 @@ head # ->
 nano /etc/hostname
 sudo reboot #para aplicar a mudança
 
+# -a recursivo, -v verbose
+# --progress mostra progresso da transferencia
+rsync -av /path/to/source /path/to/destination
+
+
+# checar integridade
+# 
+md5sum /path/to/source/file1 /path/to/source/file2
+
+#copia resultado parar aquivo
+md5sum /path/to/source/file1 > checksum.md5
+
+
+
 
