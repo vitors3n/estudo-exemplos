@@ -22,3 +22,7 @@ https://github.com/ohmyzsh/ohmyzsh/issues/5686#issuecomment-486348316
 
 ### Algumas explicações sobre /etc/skel no Linux
 https://www.thegeekdiary.com/understanding-the-etc-skel-directory-in-linux/
+
+
+### Criação de Symlinks com path relativo
+https://www.baeldung.com/linux/absolute-and-relative-symlinks
