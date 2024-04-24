@@ -26,3 +26,7 @@ https://www.thegeekdiary.com/understanding-the-etc-skel-directory-in-linux/
 
 ### Criação de Symlinks com path relativo
 https://www.baeldung.com/linux/absolute-and-relative-symlinks
+
+
+### Sobre umount e quando apresnetar erro target is busy (resolução com fuser)
+https://ioflood.com/blog/umount-linux-command/
