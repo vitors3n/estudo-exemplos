@@ -62,6 +62,14 @@ md5sum /path/to/source/file1 /path/to/source/file2
 #copia resultado parar aquivo
 md5sum /path/to/source/file1 > checksum.md5
 
+# Exemplo de BASH_REMATCH[0]
+string="Hello, world!"
 
+pattern="Hello, (.*)!"
 
-
+if [[ $string =~ $pattern ]]; then
+    echo "Matched: ${BASH_REMATCH[0]}"
+    echo "Capture group 1: ${BASH_REMATCH[1]}"
+else
+    echo "No match"
+fi
