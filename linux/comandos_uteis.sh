@@ -73,3 +73,14 @@ if [[ $string =~ $pattern ]]; then
 else
     echo "No match"
 fi
+
+
+# verifica se uma pasta esta diponivel com bash
+#!/bin/bash
+
+timeout 5s ls /pasta
+
+if [ $? -eq 124 ]; then
+        echo "indisponivel" >&2
+        exit 1
+fi
