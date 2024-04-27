@@ -30,3 +30,6 @@ https://www.baeldung.com/linux/absolute-and-relative-symlinks
 
 ### Sobre umount e quando apresnetar erro target is busy (resolução com fuser)
 https://ioflood.com/blog/umount-linux-command/
+
+### Sourceslist do Debian 11 ~ 12
+https://wiki.debian.org/pt_BR/SourcesList
