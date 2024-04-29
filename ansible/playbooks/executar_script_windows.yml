@@ -1,0 +1,13 @@
+---
+- name: Executar script no windows
+  hosts: windows_hosts
+  become: yes
+  tasks:
+    - name: Copia script para host
+      win_copy:
+        src: /caminho/local/para/seu/script.ps1
+        dest: C:\caminho\remoto\para\o\script.ps1
+
+    - name: Exec PowerShell script
+      win_shell: |
+        C:\caminho\remoto\para\o\script.ps1
