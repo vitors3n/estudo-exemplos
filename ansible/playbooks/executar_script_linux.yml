@@ -1,0 +1,8 @@
+# Script fica em um caminho no Ansible control node
+---
+- name: Execute script
+  hosts: linux_hosts
+  become: yes
+  tasks:
+    - name: Exec script
+      script: /script.sh
