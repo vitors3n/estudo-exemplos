@@ -1,4 +1,10 @@
 
+### Configuração LDAP
+https://www.server-world.info/en/note?os=Debian_10&p=openldap&f=3
+
+### Documentação OpenLdap
+https://www.openldap.org/doc/
+
 
 Bloqueando leitura de atributos por outros usuários.
 
