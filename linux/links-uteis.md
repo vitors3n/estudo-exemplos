@@ -33,3 +33,8 @@ https://ioflood.com/blog/umount-linux-command/
 
 ### Sourceslist do Debian 11 ~ 12
 https://wiki.debian.org/pt_BR/SourcesList
+
+
+
+### Por padrão o Rstudio server usa PAM para realizar o login no serviço
+https://docs.posit.co/ide/server-pro/1.4.1103-4/authenticating-users.html#pam-authentication
