@@ -1,0 +1,16 @@
+---
+- name: Remove o usuário Aluno e deleta seus arquivos
+  hosts: groupo_de_hosts
+  become: yes  # This is necessary to execute commands with root privileges
+  
+  tasks:
+    - name: Remove u usuário
+      user:
+        name: Aluno
+        state: absent  # So remove se está presente
+      
+    - name: Deleta a home do usuário
+      file:
+        path: /home/Aluno
+        state: absent
+        recurse: yes
