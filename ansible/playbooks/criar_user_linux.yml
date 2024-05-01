@@ -1,0 +1,13 @@
+---
+- name: Criar usuario aluno sem senha
+  hosts: grupo_de_hosts
+  become: yes
+  
+  tasks:
+    - name: Criar aluno sem senha
+      user:
+        name: Aluno
+        state: present  # Cria se não existir aluno
+        shell: /bin/bash
+        create_home: yes
+        password: ''
