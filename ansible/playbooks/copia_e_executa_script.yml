@@ -1,0 +1,15 @@
+---
+- name: Bloqueia mudanca de senha para usuario aluno Aluno
+  hosts: grupo_dos_hosts
+  become: yes
+  
+  tasks:
+    - name: Copia o script para a maquin
+      copy:
+        src: /caminho/para/bloqueia_mudar_senha.sh
+        dest: /tmp/bloqueia_mudar_senha.sh
+        mode: 0755  # Permissões de execução
+
+    - name: Executa o script 
+      shell: /tmp/bloqueia_mudar_senha.sh
+    
