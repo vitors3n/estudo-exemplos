@@ -6,6 +6,17 @@
 
 ---
 
+### Automaticamente retry quando conexão não for 200
+
+```
+
+RewriteEngine On
+RewriteCond %{ENV:REDIRECT_STATUS} !=200
+RewriteCond %{TIMEOUT} >0
+RewriteRule ^/(.*)$ http://%{HTTP_HOST}/$1 [P,L]
+
+```
+
 ### Redirecionado  http://  para https://
 
 ```
