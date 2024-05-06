@@ -1,0 +1,10 @@
+FROM quay.io/jupyterhub/jupyterhub
+RUN apt-get -u update
+RUN DEBIAN_FRONTEND=noninteractive apt-get -y install nscd nslcd
+RUN DEBIAN_FRONTEND=noninteractive apt-get -y install libnss-ldapd libpam-ldapd ldap-utils
+RUN pip3 install notebook
+RUN export DEBIAN_FRONTEND=gtk
+COPY start.sh /root/start.sh
+RUN chmod 777 /root/start.sh
+
+ENTRYPOINT ["/root/start.sh"]
