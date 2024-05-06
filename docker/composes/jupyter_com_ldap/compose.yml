@@ -1,0 +1,21 @@
+services:
+  jupyterhub:
+    build:
+      context: .
+      dockerfile: jupyterhub-example
+    hostname: jupyter-example
+    container_name: jupyterhub-example
+    mem_limit: "6g"
+    restart: always
+    cgroup_parent: jupyter_biome.slice
+    ports:
+      - "9191:9191"
+    environment:
+      - BASE_DN=dc=server,dc=org
+      - URI=ldap://server.org
+      - ROOT_ADDCOUNT=cn=admin,dc=$server,dc=org
+      - ROOT_PASSWORD=$senha
+    volumes:
+      - /home:/home
+    extra_hosts:
+      - "server.org:192.168.0.199"
