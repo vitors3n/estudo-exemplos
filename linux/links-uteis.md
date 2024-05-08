@@ -38,5 +38,10 @@ https://wiki.debian.org/pt_BR/SourcesList
 ### Por padrão o Rstudio server usa PAM para realizar o login no serviço
 https://docs.posit.co/ide/server-pro/1.4.1103-4/authenticating-users.html#pam-authentication
 
+
 ### Previne root pelo bootloader
 https://unix.stackexchange.com/questions/17284/how-can-i-prevent-someone-from-gaining-root-access-through-the-bootloader
+
+
+### Cgroups no Ubuntu
+https://gist.github.com/avoidik/1c7c53f02461f716aabebf3372a6199d
