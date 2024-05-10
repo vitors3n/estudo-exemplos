@@ -17,3 +17,6 @@ https://httpd.apache.org/docs/2.4/expr.html
 ## Mod do apache para habilitar public_html das homes dos usuários no endereço web
 ### Ex: https://meusite.com/~usuario/
 https://httpd.apache.org/docs/2.4/mod/mod_userdir.html
+
+## Subdiretorio como root do rstudio server
+https://github.com/rstudio/rstudio/issues/1676#issuecomment-975796606
