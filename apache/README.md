@@ -6,6 +6,15 @@
 
 ---
 
+### Redirecionando https://exemplo.com/subdir para https://exemplo.com/subdir/
+
+```
+
+RewriteEngine On
+RewriteRule /subdir$ https://%{HTTP_HOST}/subdir/ [L,R=301]
+
+```
+
 ### Automaticamente retry quando conexão não for 200
 
 ```
