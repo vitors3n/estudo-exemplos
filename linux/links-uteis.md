@@ -45,3 +45,6 @@ https://unix.stackexchange.com/questions/17284/how-can-i-prevent-someone-from-ga
 
 ### Cgroups no Ubuntu
 https://gist.github.com/avoidik/1c7c53f02461f716aabebf3372a6199d
+
+### Componentes do Linux
+https://dustybugger.com/components-of-linux/
