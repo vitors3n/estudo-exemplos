@@ -48,3 +48,6 @@ https://gist.github.com/avoidik/1c7c53f02461f716aabebf3372a6199d
 
 ### Componentes do Linux
 https://dustybugger.com/components-of-linux/
+
+### cgroups limitando memória para todos os usuários
+https://pavlokhmel.com/cgroup-v2-limit-memory-and-cpu-usage-for-all-users-on-linux.html
