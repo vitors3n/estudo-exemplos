@@ -51,3 +51,12 @@ https://dustybugger.com/components-of-linux/
 
 ### cgroups limitando memória para todos os usuários
 https://pavlokhmel.com/cgroup-v2-limit-memory-and-cpu-usage-for-all-users-on-linux.html
+
+### Melhorando desempenho do NFS
+https://www.suse.com/pt-br/support/kb/doc/?id=000021413
+
+Editar arquivo /etc/nfs.conf ou usar
+
+rpc.nfsd 128 para aumentar as threads
+
+ps aux | grep "\[nfsd\]" | wc -l
