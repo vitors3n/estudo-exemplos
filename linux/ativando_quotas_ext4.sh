@@ -8,10 +8,10 @@ sudo umount /home
 sudo tune2fs -O quota /dev/sda1
 sudo mount -a
 
+# cria os arquivos de quota (aquota.user aquota.group)
+sudo quotacheck -cug /home
+
 # Ativa a quota
 quotaon -va
-
-# cria os arquivos de quota
-sudo quotacheck -cug /home
 
 sudo repquota /home 
