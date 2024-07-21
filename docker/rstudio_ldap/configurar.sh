@@ -1,3 +1,12 @@
+#!/bin/bash
+
+# Exemplos de como as váriaveis devem ser preenchidas
+# URI: ldap://example.org
+# BASE: dc=example,dc=org
+# BIND_DN: cn=admin,dc=example,dc=org
+# BIND_PW: senha_admin
+# TLS_CERT: /etc/ssl/certs/ca-tertificates.crt
+
 cat <<EOF > /etc/ldap.conf
 BASE $BASE
 URI $URI
@@ -20,9 +29,3 @@ shadow:         compat ldap
 hosts:          files dns
 networks:       files
 EOF
-
-# URI: ldap://example.org
-# BASE: dc=example,dc=org
-# BIND_DN: cn=admin,dc=example,dc=org
-# BIND_PW: senha_admin
-# TLS_CERT: /etc/ssl/certs/ca-tertificates.crt
