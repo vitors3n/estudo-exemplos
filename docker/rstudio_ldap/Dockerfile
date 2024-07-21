@@ -9,8 +9,13 @@ RUN apt-get update && \
     ldap-utils \
     && apt-get clean
 
-COPY inicia_rstudio.sh /root/inicia_rstudio.sh
+COPY iniciar_rstudio.sh /root/iniciar_rstudio.sh
+RUN chmod +x /root/iniciar_rstudio.sh
+
+# ---- Instale os pacotes aqui ----
+
+# --------------------------------
 
 EXPOSE 8787
 
-ENTRYPOINT ["/root/inicia_rstudio.sh"]
+ENTRYPOINT ["/root/iniciar_rstudio.sh"]
