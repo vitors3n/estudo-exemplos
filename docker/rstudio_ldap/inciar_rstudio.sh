@@ -29,3 +29,12 @@ shadow:         compat ldap
 hosts:          files dns
 networks:       files
 EOF
+
+chmod 600 /etc/nslcd.conf
+chmod 600 /etc/nsswitch.conf
+chmod 600 /etc/ldap/ldap.conf
+
+service nscd restart
+service nslcd restart
+
+/usr/lib/rstudio-server/bin/rserver --server-daemonize=0
