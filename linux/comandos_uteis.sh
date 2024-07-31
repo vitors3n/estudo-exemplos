@@ -83,3 +83,7 @@ fi
 
 # Grava um arquivo em disco para testar velocidade de gravação
 dd if=/dev/sda1 of=/tmp/test1.img bs=1G count=1 oflag=dsync
+
+# Pega as sessoes ativas do rstudio excluindo o comando grep da lista de processos com []
+ps -eo cmd | grep '[r]session -u' | awk '{print $3}'
+
